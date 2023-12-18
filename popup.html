@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" />
+
+    <title>My TODO List</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>My TODO List</h1>
+            <h2 id="title">Hello, quels sont vos objectifs ?</h2>
+        </div>
+        <div class="quotes">
+            <p></p>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="search">
+                <form id="form">
+                    <input required="" autocomplete="off"  class="form-control" type="text" placeholder="ajoute ici une nouvelle tâche"
+                        name="search" id="inputEcriture" aria-label="texte de la tâche">
+                    <label for="inputEcriture"></label>
+                    <button id="buttonAdd" class="button-add">Ajouter</button>
+                </form>
+            </div>
+            <div class="button-group" role="group">
+                <button id="btn" type="button" class="btn active" data-filter="all">Toutes</button>
+                <button type="button" class="btn" data-filter="todo">A faire</button>
+                <button type="button" class="btn" data-filter="done">Faites</button>
+            </div>
+
+            <ol class="list-group">
+            </ol>
+            <div class="buttonGroup">
+                <button class="button-small done">Fait</button>
+                <button class="button-small delete">Supprimer</button>
+            </div>
+            <div>
+                <button class="button-small clearAll">Tout supprimer</button>
+            </div>
+
+
+        </section>
+
+    </main>
+
+</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+<script src="pages.js/app.js"></script>
+
+</html>
