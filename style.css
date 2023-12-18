@@ -4,3 +4,26 @@ body {
     background-color: #EADFF8;
     color: #312F27;
 }
+
+ion-icon {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+button {
+    border: none;
+}
+
+.edit {
+    background-color: #F9E660;
+    color: #333;
+}
+
+.done {
+    background-color: #35E993;
+}
+
+.delete {
+    background-color: red;
+}
