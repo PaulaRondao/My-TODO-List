@@ -7,7 +7,15 @@
         "default_icon":"img/default.icon.png",
         "default_popup":"popup.html"
     },
+    "permissions": [],
     "icons": {
         "128": "img/128.png"
-    }
+    },
+    "web_accessible_resources": [
+        {
+            "ressources": ["img/checkmark-done.svg", "img/pencil.svg", "img/trash.svg"],
+            "matches": ["https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js","https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"],
+            "use_dynamic_url": true
+        }
+    ]
 }

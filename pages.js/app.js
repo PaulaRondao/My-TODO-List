@@ -1,4 +1,7 @@
 let taskList = document.querySelector(".taskList");
+let title = document.querySelector("#title");
+
+
 
 function editTask(task) {
     let taskElement = task.firstChild;
@@ -8,15 +11,26 @@ function editTask(task) {
     if (newTaskText === "" || newTaskText === null) {
         return;
     }
-    taskElement.textContent = newTaskText
+    taskElement.textContent = newTaskText;
+    
 }
 
+// a regler pour rayer le text
 function doneTask(task) {
-    taskList.s
+    let taskElement = task.firstChild;
+    console.log(taskElement)
+    let taskStrike = taskElement.classList('.strike');
+    console.log(taskStrike)
+    //     let stringStrike = document.querySelector(".stringStrike");
+    //     stringStrike.innerText = taskElement
+    //     console.log(stringStrike)
+    //     document.body.appendChild(stringStrike)
+    //     console.log(stringStrike)
 }
 
 function deleteTask(task) {
     taskList.removeChild(task);
+
 }
 
 
@@ -29,7 +43,7 @@ function addTask() {
         event.preventDefault();
 
         if (inputEcriture.value == "") {
-            alert("veuillez remplir ce formulaire")
+            alert("veuillez ecrire votre objectif")
 
         } else {
             const createList = document.createElement("li");
@@ -62,24 +76,28 @@ function addTask() {
 
             taskList.appendChild(createList);
 
+            title.style.display = "none";
+
             inputEcriture.value = "";
 
         }
     })
 };
 
-// function displayElement(title) {
-//     title.remove();
-//     let title = document.querySelector("#title");
-//     let ol = document.querySelector("ol");
-//     if (ol.innerHTML == "") {
-//         title.style.display = "block";
-//     }
 
-// }
+function deleteAllTask() {
+    let deleteAllButton = document.querySelector(".clearAll");
+    deleteAllButton.addEventListener('click', function () {
+        while (taskList.firstChild) {
+            taskList.removeChild(taskList.firstChild);
+        }
+        title.style.display = "block";
+    });
+}
 
 
-// displayElement();
+
+deleteAllTask();
 addTask();
 
 
