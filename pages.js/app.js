@@ -12,25 +12,31 @@ function editTask(task) {
         return;
     }
     taskElement.textContent = newTaskText;
-    
+
 }
 
-// a regler pour rayer le text
+
 function doneTask(task) {
     let taskElement = task.firstChild;
-    console.log(taskElement)
-    let taskStrike = taskElement.classList('.strike');
-    console.log(taskStrike)
-    //     let stringStrike = document.querySelector(".stringStrike");
-    //     stringStrike.innerText = taskElement
-    //     console.log(stringStrike)
-    //     document.body.appendChild(stringStrike)
-    //     console.log(stringStrike)
+
+    if (taskElement && taskElement.nodeType === 3) {
+
+        let span = document.createElement('span');
+        span.style.textDecoration = 'line-through';
+        span.textContent = taskElement.textContent;
+
+        task.replaceChild(span, taskElement);
+    }
 }
+
+
 
 function deleteTask(task) {
     taskList.removeChild(task);
-    // title.style.display = "block";
+
+    if (taskList.childElementCount === 0) {
+        return title.style.display = "block";
+    }
 }
 
 

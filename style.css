@@ -14,11 +14,6 @@ body {
     flex-direction: column;
 }
 
-/* .container {
-    width: 100%;
-    /* max-width: 350px;  
-    margin: 0;
-}  */
 
 .search {
     display: flex;
@@ -80,28 +75,17 @@ h3 {
 }
 
 
-.stringStrike {
-    text-decoration: line-through;
-}
-
-/*.tasksList {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 350px;
-} */
-
+/* ---------------- buttons ---------------- */
 
 ol {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    flex-direction: column;
     border-radius: 5px;
     margin-bottom: 10px; 
-    
+    gap: 10px;
 }
 
 
@@ -146,9 +130,6 @@ svg {
     background-image: url("img/trash.svg");
     cursor: pointer;
 }
-
-
-
 
 
 
