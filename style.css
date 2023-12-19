@@ -6,13 +6,31 @@
 body {
     background-color: #EADFF8;
     color: #312F27;
-    width: 25em;
-    height: 20em;
+    width: 400px;
+    /* height: 20em;  */
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* .container {
+    width: 100%;
+    /* max-width: 350px;  
+    margin: 0;
+}  */
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 .title-hidden {
-    background-color: grey;
+    background-color: #F9E660;
     margin: 10px;
 }
 
@@ -20,36 +38,29 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 h1 {
     padding: 2%;
+    margin-bottom: 20px;
 }
 
-h2 {
+h3 {
     text-align: center;
     padding: 2%;
 }
 
-input {
-    outline: none;
-    width: 50vw;
-}
-
 .form input[type='text'] {
     padding-left: 2%;
-}
-
-.search {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
+    border-radius: 5px;
+    width: 200px;
+    height: 30px; 
+} 
 
 .form {
     display: flex;
-    height: 9vh;
+    align-items: center;
 }
 
 .button-add {
@@ -61,8 +72,8 @@ input {
     color: #312F27;
     font-weight: bold;
     padding: 3.5%;
-    width: 15vw;
-    height: 9vh;
+    width: 70px;
+    height: 35px;
     border-radius: 5px;
     margin-left: 40px;
     cursor: pointer;
@@ -73,23 +84,35 @@ input {
     text-decoration: line-through;
 }
 
-.todoList {
-display: flex;
-justify-content: center;
-height: 100%;
-width: auto;
+/*.tasksList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 350px;
+} */
+
+
+ol {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+    
 }
 
 
 ion-icon {
-    /* font-size: 15px; */
+    font-size: 15px; 
     padding: 13px;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
+    align-items: center; 
+    margin-right: 10px;
+} 
 
 button {
     border: none;
@@ -104,22 +127,23 @@ svg {
     background-color: #F9E660;
     color: #333;
     font-size: 16px;
-    /* background-image: url("img/pencil.svg"); */
+    background-image: url("img/pencil.svg");
     cursor: pointer;
+    margin-left: 20px; 
 }
 
 .done {
     background-color: #35E993;
     color: #333;
     font-size: 16px;
-    /* background-image: url("img/checkmark-done.svg"); */
+    background-image: url("img/checkmark-done.svg");
     cursor: pointer;
 }
 
 .delete {
     background-color: red;
     color: #333;
-    /* background-image: url("img/trash.svg"); */
+    background-image: url("img/trash.svg");
     cursor: pointer;
 }
 
@@ -134,13 +158,15 @@ svg {
 footer {
     bottom: 0;
     margin-top: 40px;
-    height: 10vh;
+    margin-bottom: 15px;
+    height: 4%;
 }
 
 .todoButtonAll {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .buttonDeleteAll {

@@ -30,7 +30,7 @@ function doneTask(task) {
 
 function deleteTask(task) {
     taskList.removeChild(task);
-
+    // title.style.display = "block";
 }
 
 
