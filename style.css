@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Rubik Doodle Shadow';
+    src: url('./Font/Rubik_Doodle_Shadow/RubikDoodleShadow-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +16,6 @@ body {
     background-color: #EADFF8;
     color: #312F27;
     width: 400px;
-    /* height: 20em;  */
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -27,6 +35,9 @@ body {
 .title-hidden {
     background-color: #F9E660;
     margin: 10px;
+    border-radius: 0px;
+    border: 2px solid #333333;
+    box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
 }
 
 .title {
@@ -37,6 +48,7 @@ body {
 }
 
 h1 {
+    font-family: "Rubik Doodle Shadow", sans-serif;
     padding: 2%;
     margin-bottom: 20px;
 }
@@ -75,7 +87,7 @@ h3 {
 }
 
 
-/* ---------------- buttons ---------------- */
+/* ---------------- buttons form li ---------------- */
 
 ol {
     width: 100%;
@@ -88,11 +100,6 @@ ol {
     gap: 10px;
 }
 
-
-button {
-    border: none;
-    background-color: #EADFF8;
-}
 
 svg {
     font-weight: 200;
@@ -107,7 +114,7 @@ svg {
     margin-left: 20px;
 }
 
-.icons8-edit { 
+.icons8-edit {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +122,7 @@ svg {
     width: 24px;
     height: 24px;
     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+CiAgICA8cGF0aCBkPSJNIDIyLjgyODEyNSAzIEMgMjIuMzE2Mzc1IDMgMjEuODA0NTYyIDMuMTk1NDM3NSAyMS40MTQwNjIgMy41ODU5Mzc1IEwgMTkgNiBMIDI0IDExIEwgMjYuNDE0MDYyIDguNTg1OTM3NSBDIDI3LjE5NTA2MiA3LjgwNDkzNzUgMjcuMTk1MDYyIDYuNTM4ODEyNSAyNi40MTQwNjIgNS43NTc4MTI1IEwgMjQuMjQyMTg4IDMuNTg1OTM3NSBDIDIzLjg1MTY4OCAzLjE5NTQzNzUgMjMuMzM5ODc1IDMgMjIuODI4MTI1IDMgeiBNIDE3IDggTCA1LjI1OTc2NTYgMTkuNzQwMjM0IEMgNS4yNTk3NjU2IDE5Ljc0MDIzNCA2LjE3NzUzMTMgMTkuNjU4IDYuNTE5NTMxMiAyMCBDIDYuODYxNTMxMiAyMC4zNDIgNi41OCAyMi41OCA3IDIzIEMgNy40MiAyMy40MiA5LjY0Mzg5MDYgMjMuMTI0MzU5IDkuOTYyODkwNiAyMy40NDMzNTkgQyAxMC4yODE4OTEgMjMuNzYyMzU5IDEwLjI1OTc2NiAyNC43NDAyMzQgMTAuMjU5NzY2IDI0Ljc0MDIzNCBMIDIyIDEzIEwgMTcgOCB6IE0gNCAyMyBMIDMuMDU2NjQwNiAyNS42NzE4NzUgQSAxIDEgMCAwIDAgMyAyNiBBIDEgMSAwIDAgMCA0IDI3IEEgMSAxIDAgMCAwIDQuMzI4MTI1IDI2Ljk0MzM1OSBBIDEgMSAwIDAgMCA0LjMzNzg5MDYgMjYuOTM5NDUzIEwgNC4zNjMyODEyIDI2LjkzMTY0MSBBIDEgMSAwIDAgMCA0LjM2OTE0MDYgMjYuOTI3NzM0IEwgNyAyNiBMIDUuNSAyNC41IEwgNCAyMyB6Ij48L3BhdGg+Cjwvc3ZnPg==') 50% 50% no-repeat;
-    background-size: 100%; 
+    background-size: 100%;
 }
 
 .done {
@@ -127,15 +134,15 @@ svg {
     margin-left: 10px;
 }
 
-.icons8-done { 
+.icons8-done {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 24px;
     height: 24px;
-    background : url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+CjxwYXRoIGQ9Ik0gMjYuOTgwNDY5IDUuOTkwMjM0NCBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjYuMjkyOTY5IDYuMjkyOTY4OCBMIDExIDIxLjU4NTkzOCBMIDQuNzA3MDMxMiAxNS4yOTI5NjkgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDMuMjkyOTY4OCAxNi43MDcwMzEgTCAxMC4yOTI5NjkgMjMuNzA3MDMxIEEgMS4wMDAxIDEuMDAwMSAwIDAgMCAxMS43MDcwMzEgMjMuNzA3MDMxIEwgMjcuNzA3MDMxIDcuNzA3MDMxMiBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjYuOTgwNDY5IDUuOTkwMjM0NCB6Ij48L3BhdGg+Cjwvc3ZnPg==') 50% 50% no-repeat;
-    background-size: 100%; 
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCI+CjxwYXRoIGQ9Ik0gMjYuOTgwNDY5IDUuOTkwMjM0NCBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjYuMjkyOTY5IDYuMjkyOTY4OCBMIDExIDIxLjU4NTkzOCBMIDQuNzA3MDMxMiAxNS4yOTI5NjkgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDMuMjkyOTY4OCAxNi43MDcwMzEgTCAxMC4yOTI5NjkgMjMuNzA3MDMxIEEgMS4wMDAxIDEuMDAwMSAwIDAgMCAxMS43MDcwMzEgMjMuNzA3MDMxIEwgMjcuNzA3MDMxIDcuNzA3MDMxMiBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjYuOTgwNDY5IDUuOTkwMjM0NCB6Ij48L3BhdGg+Cjwvc3ZnPg==') 50% 50% no-repeat;
+    background-size: 100%;
 }
 
 
@@ -143,7 +150,7 @@ svg {
     background-color: red;
     padding: 5px;
     color: #333;
-    cursor: pointer; 
+    cursor: pointer;
     border-radius: 50%;
     margin-left: 10px;
 }
@@ -155,7 +162,7 @@ svg {
     align-items: center;
     width: 24px;
     height: 24px;
-    background : url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CjxwYXRoIGQ9Ik0gNi40OTYwOTQgMSBDIDUuNjc1NzgxIDEgNSAxLjY3NTc4MSA1IDIuNDk2MDk0IEwgNSAzIEwgMiAzIEwgMiA0IEwgMyA0IEwgMyAxMi41IEMgMyAxMy4zMjgxMjUgMy42NzE4NzUgMTQgNC41IDE0IEwgMTAuNSAxNCBDIDExLjMyODEyNSAxNCAxMiAxMy4zMjgxMjUgMTIgMTIuNSBMIDEyIDQgTCAxMyA0IEwgMTMgMyBMIDEwIDMgTCAxMCAyLjQ5NjA5NCBDIDEwIDEuNjc1NzgxIDkuMzI0MjE5IDEgOC41MDM5MDYgMSBaIE0gNi40OTYwOTQgMiBMIDguNTAzOTA2IDIgQyA4Ljc4NTE1NiAyIDkgMi4yMTQ4NDQgOSAyLjQ5NjA5NCBMIDkgMyBMIDYgMyBMIDYgMi40OTYwOTQgQyA2IDIuMjE0ODQ0IDYuMjE0ODQ0IDIgNi40OTYwOTQgMiBaIE0gNSA1IEwgNiA1IEwgNiAxMiBMIDUgMTIgWiBNIDcgNSBMIDggNSBMIDggMTIgTCA3IDEyIFogTSA5IDUgTCAxMCA1IEwgMTAgMTIgTCA5IDEyIFoiPjwvcGF0aD4KPC9zdmc+') 50% 50% no-repeat;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CjxwYXRoIGQ9Ik0gNi40OTYwOTQgMSBDIDUuNjc1NzgxIDEgNSAxLjY3NTc4MSA1IDIuNDk2MDk0IEwgNSAzIEwgMiAzIEwgMiA0IEwgMyA0IEwgMyAxMi41IEMgMyAxMy4zMjgxMjUgMy42NzE4NzUgMTQgNC41IDE0IEwgMTAuNSAxNCBDIDExLjMyODEyNSAxNCAxMiAxMy4zMjgxMjUgMTIgMTIuNSBMIDEyIDQgTCAxMyA0IEwgMTMgMyBMIDEwIDMgTCAxMCAyLjQ5NjA5NCBDIDEwIDEuNjc1NzgxIDkuMzI0MjE5IDEgOC41MDM5MDYgMSBaIE0gNi40OTYwOTQgMiBMIDguNTAzOTA2IDIgQyA4Ljc4NTE1NiAyIDkgMi4yMTQ4NDQgOSAyLjQ5NjA5NCBMIDkgMyBMIDYgMyBMIDYgMi40OTYwOTQgQyA2IDIuMjE0ODQ0IDYuMjE0ODQ0IDIgNi40OTYwOTQgMiBaIE0gNSA1IEwgNiA1IEwgNiAxMiBMIDUgMTIgWiBNIDcgNSBMIDggNSBMIDggMTIgTCA3IDEyIFogTSA5IDUgTCAxMCA1IEwgMTAgMTIgTCA5IDEyIFoiPjwvcGF0aD4KPC9zdmc+') 50% 50% no-repeat;
     background-size: 100%;
     color: red;
 }
@@ -183,12 +190,25 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #412299;
-    color: #F4FF94;
+    line-height: 1;
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 170px;
+    height: 40px;
     font-weight: bold;
-    padding: 6%;
-    width: 25vw;
-    height: 5vh;
-    border-radius: 5px;
+    border: 2px solid #333;
+    transition: 0.3s;
+    box-shadow: 5px 5px 0px 0px #412299;
+    /* rgba(51, 51, 51, 1); */
+    background-color: #ffffff;
     cursor: pointer;
+}
+
+.buttonDeleteAll:hover {
+    box-shadow: 0 0 #333;
+    border: 2px solid #412299;
+    color: #F4FF94;
+    background-color: #412299;
 }
