@@ -29,6 +29,9 @@ It has all the attributes of the 90s: design, bright colors and fun typography.
 
 # Demo 
 ![homepage](/img/Capture-img-1.png)
+-----------------
 ![Add a task](/img/Capture-img-2.png)
+-----------------
 ![Edit it](/img/Capture-img-3.png)
+-----------------
 ![Strike it when it's done](/img/Capture-img-4.png)
