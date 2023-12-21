@@ -15,6 +15,7 @@ It has all the attributes of the 90s: design, bright colors and fun typography.
 ### Features:
 - User-friendly, 90's vibe
 - Edit / Strike / Delete
+- Accessibility
 
 
 ### Features to be added:
