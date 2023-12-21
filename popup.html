@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header role="header">
         <div class="title">
             <h1>My TODO List</h1>
             <div class="title-hidden">
@@ -21,27 +21,32 @@
         </div>
     </header>
 
-    <main>
+    <main role="main">
         <section class="container">
             <div class="search">
                 <form class="form">
-                    <input required="" autocomplete="off" class="form-control" type="text"
+                    <input title="Ecrire une tâche" required="" autocomplete="off" class="form-control" type="text"
                         placeholder="ajoute ici une nouvelle tâche" name="search" id="inputEcriture"
-                        aria-label="texte de la tâche">
+                        aria-label="écrire une tâche" aria-labelledby="inputEcriture">
                     <label for="inputEcriture"></label>
-                    <button id="buttonAdd" class="button-add">Ajouter</button>
+                    <button id="buttonAdd" class="button-add" role="button" aria-label="ajouter une tâche à votre liste" title="ajouter la tâche">Ajouter</button>
                 </form>
             </div>
-            <ol class="taskList">
+            <ol class="taskList" role="listitem">
             </ol>
+        </section>
+
+        <section class="buttonBottom">
+            <div class="todoButtonAll">
+                <button class="buttonDeleteAll clearAll" role="button" aria-label="Supprimer toutes les tâches listées" title="Tout supprimer">Tout supprimer</button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="todoButtonAll">
-            <button class="buttonDeleteAll clearAll">Tout supprimer</button>
-        </div>
+    <footer role="contentinfo">
+        <p>@ Enjoy</p>
     </footer>
+
 </body>
 
 <script src="pages.js/main.js"></script>

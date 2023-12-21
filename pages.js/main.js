@@ -27,7 +27,7 @@ function addTask() {
 
             // Create the button edit
             let editButton = document.createElement("button");
-            editButton.innerHTML = '<i class="icons8-edit"></i>';
+            editButton.innerHTML = '<i class="icons8-edit" aria-label="Tâche à modifier" role="button" tabindex="0" title="modifier"></i>';
             editButton.classList.add('edit');
             
             editButton.onclick = function () {
@@ -36,7 +36,7 @@ function addTask() {
 
             // Create the button done
             let doneButton = document.createElement("button");
-            doneButton.innerHTML = '<i class="icons8-done"></i>';
+            doneButton.innerHTML = '<i class="icons8-done" aria-label="Tâche réalisée" role="button" tabindex="1" title="réaliser"></i>';
             doneButton.classList.add('done');
 
             doneButton.onclick = function () {
@@ -45,7 +45,7 @@ function addTask() {
 
             // Create the button delete
             let deleteButton = document.createElement("button");
-            deleteButton.innerHTML = '<i class="icons8-delete"></i>';
+            deleteButton.innerHTML = '<i class="icons8-delete" aria-label="Tâche à supprimée" role="button" tabindex="2" title="supprimer"></i>';
             deleteButton.classList.add('delete');            
 
             deleteButton.onclick = function () {
