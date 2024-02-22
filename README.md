@@ -29,6 +29,8 @@ It has all the attributes of the 90s: design, bright colors and fun typography.
 - For inspiration: [Behance](https://www.behance.net/search/projects?tracking_source=typeahead_search_direct)
 
 # Demo 
+Check the link on my codepen profil <a href="https://codepen.io/Maud-Paula-Rondao/pen/MWxdxmX">My TODO List</a>     
+
 ![homepage](/img/Capture-img-1.png)
 -----------------
 ![Add a task](/img/Capture-img-2.png)
